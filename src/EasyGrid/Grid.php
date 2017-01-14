@@ -139,7 +139,7 @@ class Grid
      */
     protected function applySearch()
     {
-        $this->meta('search', $this->config('search'));
+        $this->meta(['search' => $this->config('search')]);
         if ($this->searchStrategy) {
             $this->queryBuilder = call_user_func($this->searchStrategy, $this->queryBuilder, $this->config('search'));
         }
@@ -154,7 +154,7 @@ class Grid
     protected function applyFilters()
     {
         $filters = array_filter(explode(',', $this->config('filters')));
-        $this->meta('filters', $filters);
+        $this->meta(['filters' => $filters]);
         foreach ($filters as $filter) {
             list($scope, $params) = $this->performFilter($filter);
             if (!$this->hasScope($filter)) {
@@ -190,11 +190,11 @@ class Grid
      */
     protected function finalize()
     {
-        $this->meta('total', ($this->model)::count())
-            ->meta('count', $this->queryBuilder->count() ?: $this->meta('total'))
-            ->meta('offset', $this->config('offset'))
-            ->meta('limit', $this->config('limit'))
-            ->meta('limit', $this->config('limit'));
+        $this->meta(['total' => ($this->model)::count()])
+            ->meta(['count' => $this->queryBuilder->count() ?: $this->meta('total')])
+            ->meta(['offset' => $this->config('offset')])
+            ->meta(['limit' => $this->config('limit')])
+            ->meta(['limit' => $this->config('limit')]);
         
         $this->results = $this->queryBuilder
             ->offset($this->config('offset'))
