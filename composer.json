@@ -1,0 +1,23 @@
+{
+    "name": "easy-grid/easy-grid",
+    "description": "Laravel package for easy-grid github.com/dmytrechko/easy-grid",
+    "keywords":["laravel","datagrid"],
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dmytrechko",
+            "email": "vovadmutre4ko@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "~5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "EasyGrid\\EasyGrid\\": "src/EasyGrid/"
+        }
+    },
+    "minimum-stability": "dev"
+}
