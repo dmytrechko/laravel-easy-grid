@@ -41,3 +41,5 @@ class EasyGridServiceProvider extends ServiceProvider
         ];
     }
 }
+
+
