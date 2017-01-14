@@ -1,5 +1,5 @@
 {
-    "name": "easy-grid/easy-grid",
+    "name": "easy-grid/laravel-easy-grid",
     "description": "Laravel package for easy-grid github.com/dmytrechko/easy-grid",
     "keywords":["laravel","datagrid"],
     "type": "package",
