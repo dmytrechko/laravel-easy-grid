@@ -140,7 +140,7 @@ class Grid
     protected function applySearch()
     {
         $this->meta(['search' => $this->config('search')]);
-        if ($this->searchStrategy) {
+        if ($this->searchStrategy && $this->config('search')) {
             $this->queryBuilder = call_user_func($this->searchStrategy, $this->queryBuilder, $this->config('search'));
         }
         
