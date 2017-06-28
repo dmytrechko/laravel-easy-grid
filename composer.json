@@ -19,6 +19,6 @@
             "EasyGrid\\EasyGrid\\": "src/EasyGrid/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
 
